@@ -1,5 +1,6 @@
 final int DEFAULT_CANVAS_WIDTH  = 900;
 final int DEFAULT_CANVAS_HEIGHT = 700;
+String CHART_TYPE = "R";
 
 ExperimentKeeper experimentKeeper;
 

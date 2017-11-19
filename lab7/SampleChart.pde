@@ -9,14 +9,23 @@ public class SampleChart extends Chart{
     this.name = "sample";
     this.data = data;
     float startAngle = 0;
+    float eq_theta = ((2 * PI) / data.size());
     sumValues = data.getSum();
      segments = new ArrayList<Segment>();
+ 
     for (int i = 0; i < data.size; i++) {
       println("data.size: ", data.size);
       float angle = (data.getDataPointValue(i) * TWO_PI)/sumValues;
-      Segment s = new Segment(startAngle, angle + startAngle, data.getDataPointValue(i), data.getDataPointIsMarked(i));
-      segments.add(s);
-      startAngle += angle;
+      if(CHART_TYPE.equals("P")) {
+        Segment s = new Segment(startAngle, angle + startAngle, data.getDataPointValue(i), data.getDataPointIsMarked(i));
+        segments.add(s);
+        startAngle += angle;
+      }
+      if(CHART_TYPE.equals("R")) {
+        Segment s = new Segment(startAngle, startAngle + eq_theta, data.getDataPointValue(i), data.getDataPointIsMarked(i));
+        segments.add(s);
+        startAngle += eq_theta;
+      }
   }
   trials.add(segments);
   trial += 1;
@@ -31,8 +40,15 @@ public class SampleChart extends Chart{
     rect(this.viewX, this.viewY, this.viewWidth, this.viewHeight);
     fill(0);
 
-    //drawBars();
-    drawPie();
+    if(CHART_TYPE.equals("B")) {
+      drawBars();
+    }
+    if(CHART_TYPE.equals("P")) {
+      drawPie();
+    }
+    else{
+      drawRose();
+    }
   }
   
   void drawBars() {
@@ -49,10 +65,15 @@ public class SampleChart extends Chart{
   }
 } 
 void drawPie() {
-    float startAngle = 0;
     sumValues = data.getSum();
     for (int i = 0; i < data.size(); i++) {   
        trials.get(experimentKeeper.currentTrialIndex).get(i).render();
    }
 }
+void drawRose() {
+   for (int i = 0; i < data.size(); i++) {   
+       trials.get(experimentKeeper.currentTrialIndex).get(i).render();
+   }
+}
+
 }

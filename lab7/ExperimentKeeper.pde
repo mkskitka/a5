@@ -52,15 +52,12 @@ public class ExperimentKeeper{
       while (randIndex1 == randIndex2) {
         randIndex2 = (int) random(0,9);
       }
-      //Data d = dataset[i];
+
       for (int j = 0; j < numberOfDataPointPerTrial; j++) {
         dataset[i].setDataPoint(j, random(0, 100),j == randIndex1 || j == randIndex2);
       }
       
     }
-    //ToDo: decide how to generate the dataset you will be using (See also Data.pde)
-    //      Note that the "dataset" holds all data that will be used in one experiment
-
     return dataset;
   }
 
