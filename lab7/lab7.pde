@@ -3,12 +3,18 @@ final int DEFAULT_CANVAS_HEIGHT = 700;
 String CHART_TYPE = "R";   // P or B or R
 String indep_var = "bold"; //dash or animate or bold
 
+import garciadelcastillo.dashedlines.*;
+
+DashedLines dashed;
+
 ExperimentKeeper experimentKeeper;
 
 void setup(){
   fullScreen();
   int canvasWidth = DEFAULT_CANVAS_WIDTH;
   int canvasHeight = DEFAULT_CANVAS_HEIGHT;
+  dashed = new DashedLines(this);
+  dashed.pattern(10, 5);
 
   if(canvasWidth <= displayWidth && canvasHeight <= displayHeight){
     int canvasX = (displayWidth - canvasWidth) / 2;
@@ -26,6 +32,7 @@ void setup(){
 void draw(){
   background(255);
   experimentKeeper.draw();
+  dashed.line(10, 10, 90, 90);
 }
 
 void mouseClicked(){
