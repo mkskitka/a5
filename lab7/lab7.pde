@@ -6,6 +6,7 @@ String indep_var = "bold"; //dash or animate or bold
 import garciadelcastillo.dashedlines.*;
 
 DashedLines dashed;
+int dist = 0;
 
 ExperimentKeeper experimentKeeper;
 
@@ -31,8 +32,7 @@ void setup(){
 
 void draw(){
   background(255);
-  experimentKeeper.draw();
-  dashed.line(10, 10, 90, 90);
+  experimentKeeper.draw();  
 }
 
 void mouseClicked(){
