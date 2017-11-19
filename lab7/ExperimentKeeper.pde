@@ -1,7 +1,7 @@
 public class ExperimentKeeper{
 
   private static final String PARTICIPANT_ID     = "p1"; //ToDo: assign a unique id for each participant
-  private static final int NUMBER_OF_TRIALS      = 20;    //ToDo: deside # trials per participant
+  private static final int NUMBER_OF_TRIALS      = 9;    //ToDo: deside # trials per participant
   private static final int NUMBER_OF_DATA_POINTS = 10;   //ToDo: deside # data points per trial
 
   private static final int STATE_PROLOGUE = 0;
