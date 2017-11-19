@@ -140,6 +140,31 @@ public class ExperimentKeeper{
             }else{
               this.state = STATE_EPILOGUE;
             }
+            
+            boolean isChanged = false;
+            String type = "";
+            while(!isChanged){
+              int rand = int(random(0, 3));
+              if (rand == 0 && bold_count < 3){
+                bold_count++;
+                isChanged = true;
+                indep_var = "bold";
+              }
+              else if (rand == 1 && dash_count < 3){
+                dash_count++;
+                isChanged = true;
+                indep_var = "dash";
+              }
+              else if (rand == 2 && animate_count < 3){
+                animate_count++;
+                isChanged = true;
+                indep_var = "animate";
+              }
+              else if (animate_count >= 3 && bold_count >= 3 && dash_count >= 3){
+               isChanged = true; 
+              }
+            }
+            
           }
           break;
 

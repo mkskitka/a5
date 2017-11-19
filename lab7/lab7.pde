@@ -2,6 +2,9 @@ final int DEFAULT_CANVAS_WIDTH  = 900;
 final int DEFAULT_CANVAS_HEIGHT = 700;
 String CHART_TYPE = "R";   // P or B or R
 String indep_var = "dash"; //dash or animate or bold
+int dash_count = 1;
+int animate_count = 0;
+int bold_count = 0;
 
 import garciadelcastillo.dashedlines.*;
 
