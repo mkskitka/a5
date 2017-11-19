@@ -22,7 +22,7 @@ class Segment{
       arc(width / 2, height / 2 - 90, this.value*2.5, this.value*2.5, this.startAngle, this.stopAngle, PIE);
     }
     
-    if (this.marked) {
+    if (this.marked && indep_var.equals("bold")) {
       //println("marked?: ", this.marked, "str: ", this.startAngle, " end: ", this.stopAngle);
       float angleDiff = this.stopAngle - this.startAngle;
       //println("radius: ", (float)width/7, " sa: ", this.startAngle, " ea: ", this.stopAngle);

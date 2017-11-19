@@ -1,6 +1,7 @@
 final int DEFAULT_CANVAS_WIDTH  = 900;
 final int DEFAULT_CANVAS_HEIGHT = 700;
-String CHART_TYPE = "R";
+String CHART_TYPE = "R";   // P or B or R
+String indep_var = "bold"; //dash or animate or bold
 
 ExperimentKeeper experimentKeeper;
 

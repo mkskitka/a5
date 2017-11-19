@@ -55,10 +55,9 @@ public class SampleChart extends Chart{
     for (int i = 0; i < data.size; i++) {
       fill(#ff0000);
       rect(575 + 30*i, height - 400 - data.getDataPointValue(i), 20, data.getDataPointValue(i));
-      if (data.getDataPointIsMarked(i)) {
+      if (data.getDataPointIsMarked(i) && indep_var.equals("bold")) {
         strokeWeight(3);
-        rect(575 + 30*i, height - 400 - data.getDataPointValue(i), 20, data.getDataPointValue(i));
-        //point(575 + 30*i + 10, height - 400 - data.getDataPointValue(i)/2); //CENTERING 
+        rect(575 + 30*i, height - 400 - data.getDataPointValue(i), 20, data.getDataPointValue(i)); 
                                                                             
       }
       strokeWeight(1);
