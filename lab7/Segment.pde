@@ -11,7 +11,7 @@ class Segment{
   }
   
   void render() {
-    fill(#ff0000);
+    fill(255);
         
     stroke(color(0));
     

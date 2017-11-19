@@ -6,7 +6,7 @@ public class SampleChart extends Chart{
 
   public SampleChart(Data data, int chartX, int chartY, int chartWidth, int chartHeight){
     super(data, chartX, chartY, chartWidth, chartHeight);
-    this.name = "sample";
+    this.name = indep_var;
     this.data = data;
     float startAngle = 0;
     float eq_theta = ((2 * PI) / data.size());
