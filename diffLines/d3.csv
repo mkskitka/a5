@@ -1,0 +1,10 @@
+PartipantID,TrialIndex,ChartName,TruePercentage,ReportedPercentage,Error
+p1,0,dash,2.5197415,0.0,1.3332757
+p1,1,bold,37.175568,10.0,4.7642384
+p1,2,dash,23.777905,5.0,4.230964
+p1,3,bold,97.94863,95.0,1.5600455
+p1,4,animate,6.760511,2.0,2.2511163
+p1,5,animate,8.827404,100.0,6.5105286
+p1,6,dash,33.466183,10.0,4.552511
+p1,7,animate,16.864365,3.0,3.7933095
+p1,8,bold,67.29508,40.0,4.770569
